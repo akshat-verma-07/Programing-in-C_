@@ -1,0 +1,23 @@
+/* 
+Q118: Write a program to take an input array of size n containing numbers 
+from 0 to n except one. Print the missing number.
+*/
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n], sum = 0;
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+
+    int expected = n * (n + 1) / 2;
+
+    printf("%d", expected - sum);
+
+    return 0;
+}
